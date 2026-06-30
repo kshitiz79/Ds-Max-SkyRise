@@ -68,11 +68,11 @@ export default function FeaturedProperty() {
   const properties = [
     {
       id: 1,
-      title: "Skyora Serene Heights",
+      title: "Sky Ora Serene Heights",
       price: "₹85 L onwards",
       location: "Whitefield, Bangalore — 2 & 3 BHK Apartments",
-      frontImg: "/property-img-1.jpg",
-      backImg: "/property-img-4.jpg",
+      frontImg: "/nwe/building1.png",
+      backImg: "/nwe/building2.png",
       beds: "2 & 3 BHK",
       baths: "Ready to Move",
       area: "1150 Sqft",
@@ -80,11 +80,11 @@ export default function FeaturedProperty() {
     },
     {
       id: 2,
-      title: "Skyora Grand Residency",
+      title: "Sky Ora Grand Residency",
       price: "₹1.1 Cr onwards",
       location: "Sarjapur Road, Bangalore — 3 BHK Apartments",
-      frontImg: "/property-img-2.jpg",
-      backImg: "/property-img-5.jpg",
+      frontImg: "/nwe/building3.png",
+      backImg: "/nwe/building4.png",
       beds: "3 BHK",
       baths: "Nearing Completion",
       area: "1480 Sqft",
@@ -92,11 +92,11 @@ export default function FeaturedProperty() {
     },
     {
       id: 3,
-      title: "Skyora Elara",
+      title: "Sky Ora Elara",
       price: "₹72 L onwards",
       location: "Electronic City, Bangalore — 2 & 3 BHK Apartments",
-      frontImg: "/property-img-3.jpg",
-      backImg: "/property-img-6.jpg",
+      frontImg: "/nwe/building5.png",
+      backImg: "/nwe/building6.png",
       beds: "2 & 3 BHK",
       baths: "Under Construction",
       area: "1220 Sqft",
@@ -104,11 +104,11 @@ export default function FeaturedProperty() {
     },
     {
       id: 4,
-      title: "Skyora Verdant Park",
+      title: "Sky Ora Verdant Park",
       price: "₹95 L onwards",
       location: "Hebbal, Bangalore — 2 & 3 BHK Apartments",
-      frontImg: "/property-img-4.jpg",
-      backImg: "/property-img-5.jpg",
+      frontImg: "/nwe/building7.png",
+      backImg: "/nwe/building8.png",
       beds: "2 & 3 BHK",
       baths: "Ready to Move",
       area: "1350 Sqft",
@@ -146,14 +146,14 @@ export default function FeaturedProperty() {
     <section className="py-[120px] lg:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-[1416px]">
         {/* Section Heading Row */}
-        <div className="flex flex-wrap items-center justify-between gap-y-6 mb-[60px] lg:mb-12">
-          <div>
+        <div className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left gap-y-6 mb-[60px] lg:mb-12">
+          <div className="flex flex-col items-center sm:items-start">
             <p className="text-sm font-semibold text-[#434343] uppercase tracking-widest mb-2 font-sans">Our Projects</p>
-            <h2 className="text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
+            <h2 className="text-[30px] sm:text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
               Find Your Perfect <br />
-              Skyora Home
+              Sky Ora Home
             </h2>
-            <p className="text-[#434343] text-base leading-relaxed mt-3 mb-0 max-w-[500px] font-sans">
+            <p className="text-[#434343] text-base leading-relaxed mt-3 mb-0 max-w-[500px] mx-auto sm:mx-0 font-sans">
               From the heart of the city to its most promising corridors — explore our residential projects across Bangalore.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function FeaturedProperty() {
                     {/* Double Image Thumbnail (Zoom & Fade hover effect) */}
                     <Link
                       href={property.link}
-                      className="group/thumb block relative h-[340px] w-full overflow-hidden rounded-[20px] mb-[17px] bg-gray-50"
+                      className="group/thumb block relative h-[250px] sm:h-[340px] w-full overflow-hidden rounded-[20px] mb-[17px] bg-gray-50"
                     >
                       <Image
                         src={property.frontImg}
@@ -246,7 +246,7 @@ export default function FeaturedProperty() {
                         </ul>
 
                         {/* Title Link */}
-                        <h3 className="text-[25px] font-bold text-[#1D1D1D] mb-[10px] leading-tight font-sans">
+                        <h3 className="text-xl sm:text-[25px] font-bold text-[#1D1D1D] mb-[10px] leading-tight font-sans">
                           <Link href={property.link} className="hover:text-[#00CC61] transition-colors">
                             {property.title}
                           </Link>
@@ -283,11 +283,10 @@ export default function FeaturedProperty() {
               onClick={prevSlide}
               disabled={currentIndex === 0}
               aria-label="Previous slide"
-              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${
-                currentIndex === 0
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
-              }`}
+              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${currentIndex === 0
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
+                }`}
             >
               <span className="rotate-180"><SliderArrowIcon /></span>
             </button>
@@ -297,11 +296,10 @@ export default function FeaturedProperty() {
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
               aria-label="Next slide"
-              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${
-                currentIndex === maxIndex
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
-              }`}
+              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${currentIndex === maxIndex
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
+                }`}
             >
               <SliderArrowIcon />
             </button>
@@ -313,11 +311,10 @@ export default function FeaturedProperty() {
               onClick={prevSlide}
               disabled={currentIndex === 0}
               aria-label="Previous slide"
-              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${
-                currentIndex === 0
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
-              }`}
+              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${currentIndex === 0
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
+                }`}
             >
               <span className="rotate-180 scale-75"><SliderArrowIcon /></span>
             </button>
@@ -326,11 +323,10 @@ export default function FeaturedProperty() {
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
               aria-label="Next slide"
-              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${
-                currentIndex === maxIndex
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
-              }`}
+              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${currentIndex === maxIndex
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
+                }`}
             >
               <span className="scale-75"><SliderArrowIcon /></span>
             </button>

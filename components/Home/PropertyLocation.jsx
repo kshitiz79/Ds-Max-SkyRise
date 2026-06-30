@@ -32,10 +32,10 @@ export default function PropertyLocation() {
   const scrollRef = useRef(null);
 
   const locations = [
-    { id: 1, name: "Whitefield", count: "Skyora Serene Heights", img: "/city-tokyo.jpg", link: "/property-listing-search" },
-    { id: 2, name: "Sarjapur Road", count: "Skyora Grand Residency", img: "/city-dubai.jpg", link: "/property-listing-search" },
-    { id: 3, name: "Electronic City", count: "Skyora Elara", img: "/city-jakarta.jpg", link: "/property-listing-search" },
-    { id: 4, name: "Hebbal", count: "Skyora Verdant Park", img: "/city-newyork.jpg", link: "/property-listing-search" },
+    { id: 1, name: "Whitefield", count: "Sky Ora Serene Heights", img: "/city-tokyo.jpg", link: "/property-listing-search" },
+    { id: 2, name: "Sarjapur Road", count: "Sky Ora Grand Residency", img: "/city-dubai.jpg", link: "/property-listing-search" },
+    { id: 3, name: "Electronic City", count: "Sky Ora Elara", img: "/city-jakarta.jpg", link: "/property-listing-search" },
+    { id: 4, name: "Hebbal", count: "Sky Ora Verdant Park", img: "/city-newyork.jpg", link: "/property-listing-search" },
     { id: 5, name: "Yelahanka", count: "Coming Soon", img: "/city-tokyo.jpg", link: "/property-listing-search" },
     { id: 6, name: "Kanakapura Road", count: "Coming Soon", img: "/city-hanoi.jpg", link: "/property-listing-search" },
   ];
@@ -125,7 +125,7 @@ export default function PropertyLocation() {
             Exceptional Living
           </h2>
           <p className="text-[#434343] text-base leading-relaxed mt-4 mb-0 max-w-[600px] mx-auto font-sans">
-            From the heart of the city to its most promising corridors — Skyora projects span Bangalore&apos;s best addresses.
+            From the heart of the city to its most promising corridors — Sky Ora projects span Bangalore&apos;s best addresses.
           </p>
         </div>
       </div>

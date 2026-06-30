@@ -28,7 +28,7 @@ export default function CTA() {
         >
           <div className="absolute inset-0 bg-[#1D1D1D]/75 z-0" />
 
-          <h2 className="relative z-10 text-[35px] sm:text-[45px] md:text-[50px] lg:text-[61px] font-bold text-white leading-tight uppercase font-sans mb-[34px] max-w-[1000px]">
+          <h2 className="relative z-10 text-[26px] sm:text-[38px] md:text-[50px] lg:text-[61px] font-bold text-white leading-tight uppercase font-sans mb-[34px] max-w-[1000px]">
             Ready to Find Your{" "}
             <span className="relative inline-block text-[#00CC61]">
               Dream Home?

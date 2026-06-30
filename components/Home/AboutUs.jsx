@@ -59,15 +59,16 @@ export default function AboutUs() {
 
             <div className="container mx-auto px-4 max-w-[1416px]">
                 {/* Section Heading Row */}
-                <div className="flex flex-wrap items-center justify-between gap-y-6 mb-[60px] lg:mb-12">
-                    <div>
+                <div className="flex flex-col items-center text-center md:flex-row md:items-end md:justify-between md:text-left gap-y-6 mb-[60px] lg:mb-12">
+                    <div className="flex flex-col items-center md:items-start">
                         <p className="text-sm font-semibold text-[#434343] uppercase tracking-widest mb-2 font-sans">Who We Are</p>
-                        <h2 className="text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
+                        <h2 className="text-[30px] sm:text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
                             Built Different. <br />
                             By Design.
                         </h2>
-                        <p className="text-[#434343] text-base leading-relaxed mt-4 mb-0 max-w-[560px] font-sans">
-                            Skyora Builders was born from a simple idea: that modern Bangaloreans deserve homes that match the pace, ambition, and energy of their lives. From our first brick to your last move-in box, we&apos;re with you at every step.
+                        <p className="text-[#434343] text-base leading-relaxed mt-4 mb-0 max-w-[560px] mx-auto md:mx-0 font-sans">
+                            Skyora Builders was born from a simple idea: that modern Bangaloreans deserve homes that match the pace, ambition, and energy of their lives.
+                            We are a new-age real estate company rooted in Bangalore, committed to developing residential apartments that blend smart design, premium quality, and real value. Every project we take on starts with a question — What would make someone genuinely proud to call this home?
                         </p>
                     </div>
                     <div>
@@ -97,7 +98,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* Double Image Wrapper with Floating SVG Background Shapes */}
-                <div className="relative grid grid-cols-2 md:grid-cols-2 gap-6 mb-20 lg:mb-12">
+                <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20 lg:mb-12">
                     {/* Border Shape (animated, floating top-left) */}
                     <span
                         className="absolute left-[-16px] top-[-16px] z-0 select-none hidden lg:block opacity-45"
@@ -115,7 +116,7 @@ export default function AboutUs() {
                     </span>
 
                     {/* Card Image 1 */}
-                    <div className="relative h-[480px] md:h-[350px] w-full rounded-[20px] overflow-hidden z-1 shadow-sm">
+                    <div className="relative h-[260px] sm:h-[320px] md:h-[480px] w-full rounded-[20px] overflow-hidden z-1 shadow-sm">
                         <Image
                             src="/about-img-1.jpg"
                             alt="About Us image 1"
@@ -126,7 +127,7 @@ export default function AboutUs() {
                     </div>
 
                     {/* Card Image 2 */}
-                    <div className="relative h-[480px] md:h-[350px] w-full rounded-[20px] overflow-hidden z-1 shadow-sm">
+                    <div className="relative h-[260px] sm:h-[320px] md:h-[480px] w-full rounded-[20px] overflow-hidden z-1 shadow-sm">
                         <Image
                             src="/about-img-2.jpg"
                             alt="About Us image 2"
@@ -138,14 +139,14 @@ export default function AboutUs() {
                 </div>
 
                 {/* 3-Column Key Features Iconboxes */}
-                <div className="grid grid-cols-3 md:grid-cols-3 gap-10 md:gap-[30px] w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[30px] w-full">
                     {/* Feature 1 */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center text-center md:items-start md:text-left">
                         <span className="w-[70px] h-[70px] bg-[#1D1D1D] text-white flex items-center justify-center rounded-[20px] mb-[22px] transition-transform duration-300 hover:scale-105">
                             <TrustedPartnerIcon />
                         </span>
                         <div className="flex flex-col">
-                            <h3 className="text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
+                            <h3 className="text-[22px] md:text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
                                 Smart Design
                             </h3>
                             <p className="text-md leading-relaxed text-[#434343] m-0 font-sans">
@@ -155,12 +156,12 @@ export default function AboutUs() {
                     </div>
 
                     {/* Feature 2 */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center text-center md:items-start md:text-left">
                         <span className="w-[70px] h-[70px] bg-[#1D1D1D] text-white flex items-center justify-center rounded-[20px] mb-[22px] transition-transform duration-300 hover:scale-105">
                             <PersonalizedServiceIcon />
                         </span>
                         <div className="flex flex-col">
-                            <h3 className="text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
+                            <h3 className="text-[22px] md:text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
                                 Zero Compromise
                             </h3>
                             <p className="text-md leading-relaxed text-[#434343] m-0 font-sans">
@@ -170,16 +171,16 @@ export default function AboutUs() {
                     </div>
 
                     {/* Feature 3 */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center text-center md:items-start md:text-left">
                         <span className="w-[70px] h-[70px] bg-[#1D1D1D] text-white flex items-center justify-center rounded-[20px] mb-[22px] transition-transform duration-300 hover:scale-105">
                             <ExperiencedTeamIcon />
                         </span>
                         <div className="flex flex-col">
-                            <h3 className="text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
+                            <h3 className="text-[22px] md:text-[25px] font-bold text-[#1D1D1D] mb-[7px] leading-tight font-sans uppercase tracking-wide">
                                 Fully Compliant
                             </h3>
                             <p className="text-md leading-relaxed text-[#434343] m-0 font-sans">
-                                Every Skyora project is 100% RERA registered, BDA/BBMP/BMRDA approved, and supported by all major banks and NBFCs for seamless home loan processing.
+                                Every Sky Ora project is 100% RERA registered, BDA/BBMP/BMRDA approved, and supported by all major banks and NBFCs for seamless home loan processing.
                             </p>
                         </div>
                     </div>

@@ -58,7 +58,7 @@ export default function WorkingProcess() {
   ];
 
   return (
-    <section className="pb-[140px] lg:pb-20 bg-white">
+    <section className="py-20 md:pb-[140px] bg-white">
       <div className="container mx-auto px-4 max-w-[1416px]">
         {/* Symmetrical grid with card layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-y-0 items-center">
@@ -105,13 +105,13 @@ export default function WorkingProcess() {
           {/* Right Column - Process content */}
           <div className="lg:col-span-7 xl:pl-[120px] lg:pl-10 pl-0">
             <div className="flex flex-col">
-              <h2 className="text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase mb-10 xl:mb-[67px] font-sans">
-                How It Works? Simple Steps to Your Skyora Home
+              <h2 className="text-center lg:text-left text-[28px] sm:text-[35px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase mb-10 xl:mb-[67px] font-sans">
+                How It Works? Simple Steps to Your Sky Ora Home
               </h2>
 
-              <div className="flex flex-col space-y-[30px] max-w-[588px]">
+              <div className="flex flex-col space-y-[30px] max-w-[588px] mx-auto lg:mx-0">
                 {steps.map((item) => (
-                  <div key={item.id} className="group flex flex-row items-start gap-5 md:gap-7">
+                  <div key={item.id} className="group flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-5 md:gap-7">
                     {/* Circle Icon Container with custom hover scale fill */}
                     <div className="relative w-20 h-20 flex-none rounded-full border border-gray-150 text-[#1D1D1D] flex items-center justify-center overflow-hidden transition-all duration-400 ease-in-out group-hover:border-[#1D1D1D] group-hover:text-white">
                       {/* Scale bubble layer */}
@@ -122,7 +122,7 @@ export default function WorkingProcess() {
 
                     {/* Step descriptions */}
                     <div className="flex flex-col pt-1.5">
-                      <h3 className="text-2xl md:text-[31px] font-semibold text-[#1D1D1D] mb-1.5 leading-snug font-sans">
+                      <h3 className="text-xl sm:text-2xl md:text-[31px] font-semibold text-[#1D1D1D] mb-1.5 leading-snug font-sans">
                         {item.title}
                       </h3>
                       <p className="text-base text-[#434343] font-normal leading-relaxed m-0 font-sans">

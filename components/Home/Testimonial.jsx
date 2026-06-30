@@ -33,15 +33,15 @@ export default function Testimonial() {
     {
       id: 1,
       name: "Rahul M.",
-      role: "Resident, Skyora Serene Heights",
+      role: "Resident, Sky Ora Serene Heights",
       avatar: "/avatar-1.jpg",
-      quote: "I was skeptical at first — every developer makes big promises. But Skyora actually delivered on every single one. The quality, the timeline, the support team — all top-notch.",
+      quote: "I was skeptical at first — every developer makes big promises. But Skyora actually delivered on every single one. The quality, the timeline, the support team — all top-notch",
       rating: 5,
     },
     {
       id: 2,
       name: "Priya S.",
-      role: "Resident, Skyora Grand Residency",
+      role: "Resident, Sky Ora Grand Residency",
       avatar: "/avatar-2.jpg",
       quote: "Moving to Bangalore for work was stressful enough. Skyora made finding a home the easiest part of it. The transparency throughout the process was honestly refreshing.",
       rating: 5,
@@ -49,19 +49,12 @@ export default function Testimonial() {
     {
       id: 3,
       name: "Aditya & Sneha K.",
-      role: "Residents, Skyora Elara",
+      role: "Residents, Sky Ora Elara",
       avatar: "/avatar-3.jpg",
       quote: "The apartment design is so thoughtful — from the kitchen layout to the balcony view. This doesn't feel like a builder flat. It feels like a home someone actually thought about.",
       rating: 5,
     },
-    {
-      id: 4,
-      name: "Rahul M.",
-      role: "Resident, Skyora Serene Heights",
-      avatar: "/avatar-1.jpg",
-      quote: "I was skeptical at first — every developer makes big promises. But Skyora actually delivered on every single one. The quality, the timeline, the support team — all top-notch.",
-      rating: 5,
-    },
+
   ];
 
   useEffect(() => {
@@ -101,11 +94,11 @@ export default function Testimonial() {
     <section className="bg-[#1D1D1D] py-[127px] lg:py-20 overflow-hidden">
       <div className="container mx-auto px-4 max-w-[1416px]">
         {/* Section Heading Row */}
-        <div className="flex flex-wrap items-center justify-between gap-y-6 mb-[60px] lg:mb-12">
-          <div>
+        <div className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left gap-y-6 mb-[60px] lg:mb-12">
+          <div className="flex flex-col items-center sm:items-start">
             <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-2 font-sans">Real People. Real Stories.</p>
-            <h2 className="text-[39px] md:text-[49px] font-bold text-white leading-tight m-0 uppercase font-sans">
-              Skyora Residents <br />
+            <h2 className="text-[30px] sm:text-[39px] md:text-[49px] font-bold text-white leading-tight m-0 uppercase font-sans">
+              Sky Ora Residents <br />
               Speak
             </h2>
           </div>
@@ -116,11 +109,10 @@ export default function Testimonial() {
                 onClick={prevSlide}
                 disabled={currentIndex === 0}
                 aria-label="Previous slide"
-                className={`w-[50px] h-[45px] border rounded-[10px] flex items-center justify-center transition-all duration-400 ${
-                  currentIndex === 0
-                    ? "border-white/20 text-white/20 cursor-not-allowed"
-                    : "border-white text-white hover:bg-white hover:text-[#1D1D1D] cursor-pointer"
-                }`}
+                className={`w-[50px] h-[45px] border rounded-[10px] flex items-center justify-center transition-all duration-400 ${currentIndex === 0
+                  ? "border-white/20 text-white/20 cursor-not-allowed"
+                  : "border-white text-white hover:bg-white hover:text-[#1D1D1D] cursor-pointer"
+                  }`}
               >
                 <ArrowLeftIcon />
               </button>
@@ -128,11 +120,10 @@ export default function Testimonial() {
                 onClick={nextSlide}
                 disabled={currentIndex === maxIndex}
                 aria-label="Next slide"
-                className={`w-[50px] h-[45px] border rounded-[10px] flex items-center justify-center transition-all duration-400 ${
-                  currentIndex === maxIndex
-                    ? "border-white/20 text-white/20 cursor-not-allowed"
-                    : "border-white text-white hover:bg-white hover:text-[#1D1D1D] cursor-pointer"
-                }`}
+                className={`w-[50px] h-[45px] border rounded-[10px] flex items-center justify-center transition-all duration-400 ${currentIndex === maxIndex
+                  ? "border-white/20 text-white/20 cursor-not-allowed"
+                  : "border-white text-white hover:bg-white hover:text-[#1D1D1D] cursor-pointer"
+                  }`}
               >
                 <ArrowRightIcon />
               </button>
@@ -153,9 +144,9 @@ export default function Testimonial() {
               >
                 {/* Testimonial Card */}
                 <div className="border border-[#434343] rounded-[15px] p-[30px] md:p-[50px] flex flex-col justify-between h-full bg-transparent min-h-[380px]">
-                  
+
                   {/* Top: Avatar information */}
-                  <div className="flex items-center gap-5 mb-10 lg:mb-[30px]">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left gap-5 mb-10 lg:mb-[30px]">
                     <div className="relative w-[60px] h-[60px] rounded-full border border-[#434343] overflow-hidden flex-none">
                       <Image
                         src={item.avatar}
@@ -176,13 +167,13 @@ export default function Testimonial() {
                   </div>
 
                   {/* Middle: Testimonial content and quote overlay */}
-                  <div className="relative mb-10 lg:mb-[30px] flex-grow">
-                    <blockquote className="text-base text-[#E2E2E2] leading-relaxed italic m-0 relative z-10 font-sans pr-10">
+                  <div className="relative mb-10 lg:mb-[30px] flex-grow text-center sm:text-left">
+                    <blockquote className="text-base text-[#E2E2E2] leading-relaxed italic m-0 relative z-10 font-sans pr-0 sm:pr-10 text-center sm:text-left">
                       &ldquo;{item.quote}&rdquo;
                     </blockquote>
-                    
+
                     {/* Absolute quote icon at middle-right */}
-                    <div className="absolute top-1/2 right-0 -translate-y-1/2 w-9 h-[26px] opacity-40 z-0 pointer-events-none">
+                    <div className="absolute top-1/2 right-0 -translate-y-1/2 w-9 h-[26px] opacity-40 z-0 pointer-events-none hidden sm:block">
                       <Image
                         src="/icons/quote-right.svg"
                         alt="Quote icon"
@@ -193,7 +184,7 @@ export default function Testimonial() {
                   </div>
 
                   {/* Bottom: Rating star metrics */}
-                  <div className="flex items-center gap-[7px] z-10">
+                  <div className="flex items-center justify-center sm:justify-start gap-[7px] z-10">
                     {Array.from({ length: item.rating }).map((_, i) => (
                       <StarIcon key={i} />
                     ))}
@@ -203,6 +194,20 @@ export default function Testimonial() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* CTA share story */}
+        <div className="mt-16 text-center border-t border-white/10 pt-10">
+          <p className="text-base text-gray-300 font-sans font-medium">
+            Want to share your Skyora story?{" "}
+            <a
+              href="/contact-us?subject=testimonial"
+              className="text-[#00CC61] hover:underline inline-flex items-center gap-1 font-bold ml-1 transition-colors uppercase tracking-wider"
+            >
+              <span>Submit Your Testimonial</span>
+              <span>&rarr;</span>
+            </a>
+          </p>
         </div>
 
       </div>

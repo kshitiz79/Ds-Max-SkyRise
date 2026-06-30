@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { IoLocationOutline } from "react-icons/io5";
 
 // CountUp component to animate metric numbers natively
 const CountUp = ({ end, decimals = 0, duration = 2000, trigger }) => {
@@ -73,10 +74,19 @@ export default function StartCounter() {
       target: 2,
       suffix: "K+",
       decimals: 0,
-      description: "Happy families who call a Skyora home their own.",
+      description: "Happy families who call a Sky Ora home their own.",
     },
     {
       id: 3,
+      icon: "/icons/download.png",
+      prefix: "",
+      target: 10,
+      suffix: "+",
+      decimals: 0,
+      description: "Prime Locations Across Bangalore.",
+    },
+    {
+      id: 4,
       icon: "/icons/review.svg",
       prefix: "",
       target: 8,
@@ -89,7 +99,7 @@ export default function StartCounter() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#1D1D1D] bg-cover bg-center bg-no-repeat py-[140px] lg:py-20 overflow-hidden"
+      className="relative bg-[#1D1D1D] bg-cover bg-center bg-no-repeat py-20 md:py-[140px] overflow-hidden"
       style={{ backgroundImage: "url('/counter-bg-1.jpg')" }}
     >
       {/* Self-contained slow rotation/float animation for the decorative star shapes */}
@@ -111,7 +121,7 @@ export default function StartCounter() {
       <div className="absolute inset-0 bg-[#1D1D1D]/75 z-0" />
 
       <div className="container mx-auto px-4 max-w-[1416px] relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-y-0 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-0 text-center">
           {counters.map((item) => (
             <div key={item.id} className="flex flex-col items-center max-w-[264px] mx-auto">
               {/* Icon Container */}

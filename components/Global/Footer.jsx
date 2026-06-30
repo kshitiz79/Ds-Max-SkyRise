@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 // SVG Icons
 const SendIcon = () => (
@@ -49,28 +49,29 @@ export default function Footer() {
   };
 
   const discoverLinks = [
-    { label: "Whitefield", href: "/property-listing-search" },
-    { label: "Sarjapur Road", href: "/property-listing-search" },
-    { label: "Electronic City", href: "/property-listing-search" },
-    { label: "Hebbal", href: "/property-listing-search" },
-    { label: "Yelahanka", href: "/property-listing-search" },
-    { label: "Kanakapura Road", href: "/property-listing-search" },
+    { label: "Whitefield", href: "/property-listing-buy" },
+    { label: "Sarjapur Road", href: "/property-listing-buy" },
+    { label: "Electronic City", href: "/property-listing-buy" },
+    { label: "Hebbal", href: "/property-listing-buy" },
+    { label: "Yelahanka", href: "/property-listing-buy" },
+    { label: "Kanakapura Road", href: "/property-listing-buy" },
   ];
 
   const quickLinks = [
     { label: "About Us", href: "/about-us" },
     { label: "Our Projects", href: "/property-listing-buy" },
-    { label: "Amenities", href: "/" },
-    { label: "Channel Partner", href: "/contact-us" },
-    { label: "Refer & Earn", href: "/contact-us" },
+    { label: "Amenities", href: "/#why-choose-us" },
+    { label: "Channel Partner", href: "/contact-us?subject=channel-partner" },
+    { label: "Refer & Earn", href: "/contact-us?subject=refer" },
     { label: "Insights", href: "/blog" },
   ];
 
   const socialLinks = [
-    { label: "Facebook", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "YouTube", href: "#" },
-    { label: "Instagram", href: "#" },
+    { label: "Facebook", href: "https://facebook.com" },
+    { label: "LinkedIn", href: "https://linkedin.com" },
+    { label: "YouTube", href: "https://youtube.com" },
+    { label: "Instagram", href: "https://instagram.com" },
+    { label: "X (Twitter)", href: "https://x.com" },
   ];
 
   return (
@@ -82,27 +83,27 @@ export default function Footer() {
       <div className="absolute inset-0 bg-[#1D1D1D]/90 z-0 pointer-events-none" />
 
       <div className="container mx-auto px-4 max-w-[1416px] relative z-10">
-        
+
         {/* Main Footer widgets grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-10 lg:gap-y-0 text-white">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-10 lg:gap-y-0 text-white text-center md:text-left">
+
           {/* Column 1: Logo and Newsletter */}
           <div className="lg:col-span-5 pr-0 md:pr-10 lg:pr-20">
-            <div className="flex flex-col">
-              <div className="relative w-[158px] h-10 mb-10 md:mb-12">
+            <div className="flex flex-col items-center md:items-start">
+              <Link href="/" className="relative w-[158px] h-10 mb-10 md:mb-12 block">
                 <Image
-                  src="/logo-2.svg"
-                  alt="Xproperty Logo"
+                  src="/logo.png"
+                  alt="Logo"
                   fill
                   className="object-contain"
                 />
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-6 lg:mb-5 font-sans">
+              </Link>
+
+              <div className="w-full">
+                <h3 className="text-xl font-semibold text-white mb-6 lg:mb-5 font-sans text-center md:text-left">
                   Stay Updated on New Launches:
                 </h3>
-                <form onSubmit={handleSubmit} className="relative w-full max-w-[420px]">
+                <form onSubmit={handleSubmit} className="relative w-full max-w-[420px] mx-auto md:mx-0">
                   <input
                     type="email"
                     name="email"
@@ -125,13 +126,13 @@ export default function Footer() {
 
           {/* Column 2: Discover Locations */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans">
+            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans text-center md:text-left">
               Locations
             </h3>
-            <ul className="flex flex-col space-y-3.5 list-none p-0 m-0 text-base text-[#E2E2E2] font-sans">
+            <ul className="flex flex-col items-center md:items-start space-y-3.5 list-none p-0 m-0 text-base text-[#E2E2E2] font-sans">
               {discoverLinks.map((link, idx) => (
                 <li key={idx}>
-                  <Link href={link.href} className="hover:text-[#00CC61] transition-all duration-300">
+                  <Link href={link.href} className="hover:text-[#00CC61] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -141,13 +142,13 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans">
+            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans text-center md:text-left">
               Quick Links
             </h3>
-            <ul className="flex flex-col space-y-3.5 list-none p-0 m-0 text-base text-[#E2E2E2] font-sans">
+            <ul className="flex flex-col items-center md:items-start space-y-3.5 list-none p-0 m-0 text-base text-[#E2E2E2] font-sans">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
-                  <Link href={link.href} className="hover:text-[#00CC61] transition-all duration-300">
+                  <Link href={link.href} className="hover:text-[#00CC61] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -157,39 +158,42 @@ export default function Footer() {
 
           {/* Column 4: Contact details */}
           <div className="lg:col-span-3">
-            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans">
+            <h3 className="text-xl font-semibold text-white mb-[17px] font-sans text-center md:text-left">
               Contact Us
             </h3>
             <ul className="flex flex-col space-y-5 list-none p-0 m-0 text-base text-[#E2E2E2] font-sans">
-              
+
               {/* Address */}
-              <li className="flex items-start gap-4">
-                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none mt-1">
+              <li className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none mt-1 md:mt-0">
                   <LocationPinIcon />
                 </span>
-                <p className="m-0 leading-relaxed text-sm pt-0.5">
-                  Skyora Builders Pvt. Ltd., <br />
-                  Bengaluru, Karnataka
+                <p className="m-0 leading-relaxed text-sm pt-0.5 text-center md:text-left">
+                  Sky Ora Builders Pvt. Ltd., <br />
+                  3rd Floor, Site No.31, Flat No.301, <br />
+                  Vinayaka Layout, Opp Blinkit Gowdown, <br />
+                  Doddathogur, Bengaluru, <br />
+                  Karnataka - 560100
                 </p>
               </li>
 
               {/* Email */}
-              <li className="flex items-start gap-4">
-                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none mt-0.5">
+              <li className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4">
+                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none">
                   <EnvelopeIcon />
                 </span>
-                <a href="mailto:hello@skyorabuilders.com" className="hover:text-[#00CC61] transition-colors leading-10 text-sm">
+                <a href="mailto:hello@skyorabuilders.com" className="text-sm hover:text-[#00CC61] text-center md:text-left transition-colors">
                   hello@skyorabuilders.com
                 </a>
               </li>
 
               {/* Phone */}
-              <li className="flex items-start gap-4">
-                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none mt-0.5">
+              <li className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-4">
+                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white flex-none">
                   <PhoneIcon />
                 </span>
-                <a href="tel:+919999999999" className="hover:text-[#00CC61] transition-colors leading-10 text-sm">
-                  +91 XXXXX XXXXX
+                <a href="tel:+918095132132" className="text-sm hover:text-[#00CC61] text-center md:text-left transition-colors">
+                  +91 80951 32132
                 </a>
               </li>
 
@@ -203,23 +207,25 @@ export default function Footer() {
 
         {/* Bottom row: Copyright, social & currency */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-y-5 md:gap-y-0 text-sm text-[#E2E2E2] font-sans">
-          
+
           {/* Copyright text */}
-          <div className="order-2 md:order-1 text-center md:text-left">
-            &copy; 2025 Skyora Builders Pvt. Ltd. All rights reserved. All projects are RERA registered.
+          <div className="order-2 md:order-1 text-center md:text-left text-xs max-w-[700px] text-gray-400 leading-relaxed">
+            All images, floor plans, and renderings shown on this website are for representational purposes only. Pricing is indicative and subject to change. All projects are RERA registered. Please contact our sales team for the most current information. Skyora Builders Pvt. Ltd. &copy; 2025. All rights reserved.
           </div>
 
           {/* Socials & currency options */}
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 order-1 md:order-2">
-            <span className="text-white font-medium">$USD</span>
-            
+            <span className="text-white font-medium">INR</span>
+
             {/* Social icons row */}
             <div className="flex items-center gap-5">
               {socialLinks.map((link, idx) => (
                 <a
                   key={idx}
                   href={link.href}
-                  className="hover:text-[#00CC61] transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00CC61] transition-colors"
                 >
                   {link.label}
                 </a>

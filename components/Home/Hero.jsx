@@ -153,7 +153,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat w-full min-h-[1000px] xl:min-h-[850px] lg:min-h-auto flex items-center pt-[215px] pb-[120px] lg:pt-[220px] lg:pb-[140px] md:pt-[160px] md:pb-[80px]"
+      className="relative bg-cover bg-center bg-no-repeat w-full min-h-[700px] sm:min-h-[850px] xl:min-h-[1000px] flex items-center pt-[140px] pb-[60px] md:pt-[160px] md:pb-[80px] lg:pt-[220px] lg:pb-[140px]"
       style={{ backgroundImage: "url('/hero-bg-1.jpg')" }}
     >
       {/* Background soft shade overlay for text readability */}
@@ -163,14 +163,14 @@ export default function Hero() {
         <div className="max-w-[946px] mx-auto flex flex-col items-center justify-center">
           {/* Main Title Heading */}
           <h1
-            className="text-[49px] md:text-[56px] lg:text-[51px] font-bold text-center text-[#1D1D1D] leading-[1.23] m-0 font-sans uppercase"
+            className="text-[32px] sm:text-[45px] md:text-[56px] lg:text-[51px] font-bold text-center text-[#1D1D1D] leading-[1.23] m-0 font-sans uppercase"
           >
             Rise Above. Live Beyond.
           </h1>
           <p className="text-center text-[#434343] text-lg mt-5 mb-0 max-w-[700px] mx-auto font-sans">
             Bangalore&apos;s next-generation residential apartments — designed for the way you actually live.
           </p>
-
+          <p className="text-center text-black text-xs mt-5 mb-0 max-w-[650px] mx-auto font-sans">At Skyora Builders, we don't just construct homes. We engineer futures. From sleek studio apartments to expansive 3 BHK residences, every Skyora home is a statement — bold, functional, and built for people who expect more</p>
           {/* Spacer */}
           <div className="h-[40px] lg:h-[30px] w-full" />
 
@@ -205,7 +205,7 @@ export default function Hero() {
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center gap-[10px] w-full justify-between sm:justify-start">
 
               {/* Category input (Buy/Rent) */}
-              <div className="w-[12%] xl:w-[calc(19%-10px)] md:w-[calc(33%-5px)] xs:w-full">
+              <div className="w-full md:w-[calc(50%-10px)] lg:w-[12%] xl:w-[calc(19%-10px)]">
                 <CustomSelect
                   value={category}
                   onChange={setCategory}
@@ -216,7 +216,7 @@ export default function Hero() {
               </div>
 
               {/* Property Type input */}
-              <div className="w-[22%] xl:w-[calc(25%)] md:w-[calc(40₹%-5px)] xs:w-full">
+              <div className="w-full md:w-[calc(50%-10px)] lg:w-[22%] xl:w-[calc(25%)]">
                 <CustomSelect
                   value={propertyType}
                   onChange={setPropertyType}
@@ -227,7 +227,7 @@ export default function Hero() {
               </div>
 
               {/* Location input */}
-              <div className="w-[33%] xl:w-[calc(27%-10px)] md:w-full xs:w-full">
+              <div className="w-full md:w-full lg:w-[33%] xl:w-[calc(27%-10px)]">
                 <CustomSelect
                   value={location}
                   onChange={setLocation}
@@ -238,7 +238,7 @@ export default function Hero() {
               </div>
 
               {/* Advanced Button wrapper */}
-              <div className="w-auto xl:w-initial xs:w-full">
+              <div className="w-full sm:w-auto xl:w-initial">
                 <button
                   type="button"
                   onClick={() => alert("Advanced search filters opened!")}
@@ -250,10 +250,10 @@ export default function Hero() {
               </div>
 
               {/* Submit Search Button wrapper */}
-              <div className="w-auto xl:w-initial xs:w-full">
+              <div className="w-full sm:w-auto xl:w-initial">
                 <button
                   type="submit"
-                  className="group/btn relative overflow-hidden h-[45px] w-full sm:w-auto px-6 rounded-[10px] bg-[#1D1D1D] text-white border border-[#1D1D1D] font-semibold text-sm transition-colors duration-500 hover:text-[#1D1D1D] inline-flex items-center justify-center gap-2 cursor-pointer select-none"
+                  className="group/btn relative overflow-hidden h-[45px] w-full px-6 rounded-[10px] bg-[#1D1D1D] text-white border border-[#1D1D1D] font-semibold text-sm transition-colors duration-500 hover:text-[#1D1D1D] inline-flex items-center justify-center gap-2 cursor-pointer select-none"
                 >
                   {/* Sliding rising bubble effect */}
                   <span className="absolute w-[200%] h-[200%] top-[110%] left-1/2 -translate-x-1/2 rounded-full bg-white transition-all duration-600 ease-[cubic-bezier(0.58,0,0.88,1)] group-hover/btn:top-[-40%] z-0" />

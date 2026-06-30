@@ -71,9 +71,9 @@ export default function RentalProperty() {
       title: "Rooftop Pool & Lounge",
       price: "Premium",
       period: " Amenity",
-      location: "Skyora Serene Heights, Whitefield — Exclusive rooftop infinity pool with panoramic city views",
-      frontImg: "/property-img-4.jpg",
-      backImg: "/property-img-1.jpg",
+      location: "Sky Ora Serene Heights, Whitefield — Exclusive rooftop infinity pool with panoramic city views",
+      frontImg: "/nwe/building5.png",
+      backImg: "/nwe/building6.png",
       beds: "2 & 3 BHK",
       baths: "Ready to Move",
       area: "1150 Sqft",
@@ -81,12 +81,12 @@ export default function RentalProperty() {
     },
     {
       id: 2,
-      title: "Fitness Center & Spa",
+      title: " Fully Equipped Fitness Center",
       price: "World-Class",
       period: " Facility",
-      location: "Skyora Grand Residency, Sarjapur — Fully equipped gym, yoga studio, and wellness spa",
-      frontImg: "/property-img-5.jpg",
-      backImg: "/property-img-2.jpg",
+      location: "Sky Ora Grand Residency, Sarjapur — Fully equipped gym, yoga studio, and wellness spa",
+      frontImg: "/nwe/building7.png",
+      backImg: "/nwe/building8.png",
       beds: "3 BHK",
       baths: "Nearing Completion",
       area: "1480 Sqft",
@@ -94,10 +94,10 @@ export default function RentalProperty() {
     },
     {
       id: 3,
-      title: "Landscaped Gardens",
+      title: " Landscaped Gardens & Walking Paths",
       price: "Lush Green",
       period: " Spaces",
-      location: "Skyora Elara, Electronic City — Walking paths, kids' play zone, and recreational areas",
+      location: "Sky Ora Elara, Electronic City — Walking paths, kids' play zone, and recreational areas",
       frontImg: "/property-img-6.jpg",
       backImg: "/property-img-3.jpg",
       beds: "2 & 3 BHK",
@@ -107,10 +107,24 @@ export default function RentalProperty() {
     },
     {
       id: 4,
-      title: "Smart Security & EV Charging",
+      title: " Covered Parking & EV Charging Points",
       price: "24/7",
       period: " Security",
-      location: "Skyora Verdant Park, Hebbal — Smart access control, covered parking & EV charging points",
+      location: "Sky Ora Verdant Park, Hebbal — Smart access control, covered parking & EV charging points",
+      frontImg: "/property-img-1.jpg",
+      backImg: "/property-img-3.jpg",
+      beds: "2 & 3 BHK",
+      baths: "Ready to Move",
+      area: "1350 Sqft",
+      link: "/property-details",
+    },
+
+    {
+      id: 5,
+      title: "Retail & Convenience Stores on Campus",
+      price: "24/7",
+      period: " Security",
+      location: "Sky Ora Verdant Park, Hebbal — Smart access control, covered parking & EV charging points",
       frontImg: "/property-img-1.jpg",
       backImg: "/property-img-3.jpg",
       beds: "2 & 3 BHK",
@@ -119,11 +133,37 @@ export default function RentalProperty() {
       link: "/property-details",
     },
     {
-      id: 5,
+      id: 6,
       title: "High-Speed Fiber & Retail",
       price: "Connected",
       period: " Living",
-      location: "All Skyora Projects — High-speed fiber internet ready, retail & convenience stores on campus",
+      location: "All Sky Ora Projects — High-speed fiber internet ready, retail & convenience stores on campus",
+      frontImg: "/property-img-1.jpg",
+      backImg: "/property-img-3.jpg",
+      beds: "2 & 3 BHK",
+      baths: "All Projects",
+      area: "Varies",
+      link: "/property-details",
+    },
+    {
+      id: 7,
+      title: " Kids' Play Zone & Recreational Areas",
+      price: "Connected",
+      period: " Living",
+      location: "All Sky Ora Projects — High-speed fiber internet ready, retail & convenience stores on campus",
+      frontImg: "/property-img-1.jpg",
+      backImg: "/property-img-3.jpg",
+      beds: "2 & 3 BHK",
+      baths: "All Projects",
+      area: "Varies",
+      link: "/property-details",
+    },
+    {
+      id: 7,
+      title: "  24/7 Security with Smart Access",
+      price: "Connected",
+      period: " Living",
+      location: "All Sky Ora Projects — High-speed fiber internet ready, retail & convenience stores on campus",
       frontImg: "/property-img-1.jpg",
       backImg: "/property-img-3.jpg",
       beds: "2 & 3 BHK",
@@ -170,15 +210,15 @@ export default function RentalProperty() {
     <section className="py-[127px] lg:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-[1416px]">
         {/* Section Heading Row */}
-        <div className="flex flex-wrap items-center justify-between gap-y-6 mb-[60px] lg:mb-12">
-          <div>
-            <p className="text-sm font-semibold text-[#434343] uppercase tracking-widest mb-2 font-sans">Life at Skyora</p>
-            <h2 className="text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
+        <div className="flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left gap-y-6 mb-[60px] lg:mb-12">
+          <div className="flex flex-col items-center sm:items-start">
+            <p className="text-sm font-semibold text-[#434343] uppercase tracking-widest mb-2 font-sans">Life at Sky Ora</p>
+            <h2 className="text-[30px] sm:text-[39px] md:text-[49px] font-bold text-[#1D1D1D] leading-tight m-0 uppercase font-sans">
               Your Home. <br />
               Your World.
             </h2>
-            <p className="text-[#434343] text-base leading-relaxed mt-3 mb-0 max-w-[500px] font-sans">
-              Every Skyora community is more than an address — it&apos;s an ecosystem built for modern living.
+            <p className="text-[#434343] text-base leading-relaxed mt-3 mb-0 max-w-[500px] mx-auto sm:mx-0 font-sans">
+              Every Sky Ora community is more than an address — it&apos;s an ecosystem built for modern living.
             </p>
           </div>
           <div>
@@ -225,7 +265,7 @@ export default function RentalProperty() {
                     {/* Double Image Thumbnail (Zoom & Fade hover effect) */}
                     <Link
                       href={property.link}
-                      className="group/thumb block relative h-[340px] w-full overflow-hidden rounded-[20px] mb-[17px] bg-gray-50"
+                      className="group/thumb block relative h-[250px] sm:h-[340px] w-full overflow-hidden rounded-[20px] mb-[17px] bg-gray-50"
                     >
                       <Image
                         src={property.frontImg}
@@ -276,7 +316,7 @@ export default function RentalProperty() {
                         </ul>
 
                         {/* Title Link */}
-                        <h3 className="text-[25px] font-bold text-[#1D1D1D] mb-[10px] leading-tight font-sans">
+                        <h3 className="text-xl sm:text-[25px] font-bold text-[#1D1D1D] mb-[10px] leading-tight font-sans">
                           <Link href={property.link} className="hover:text-[#00CC61] transition-colors">
                             {property.title}
                           </Link>
@@ -313,11 +353,10 @@ export default function RentalProperty() {
               onClick={prevSlide}
               disabled={currentIndex === 0}
               aria-label="Previous slide"
-              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${
-                currentIndex === 0
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
-              }`}
+              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${currentIndex === 0
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
+                }`}
             >
               <span className="rotate-180"><SliderArrowIcon /></span>
             </button>
@@ -327,11 +366,10 @@ export default function RentalProperty() {
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
               aria-label="Next slide"
-              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${
-                currentIndex === maxIndex
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
-              }`}
+              className={`w-[50px] h-[50px] rounded-full border border-gray-200 bg-white flex items-center justify-center pointer-events-auto transition-all ${currentIndex === maxIndex
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow-md"
+                }`}
             >
               <SliderArrowIcon />
             </button>
@@ -343,11 +381,10 @@ export default function RentalProperty() {
               onClick={prevSlide}
               disabled={currentIndex === 0}
               aria-label="Previous slide"
-              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${
-                currentIndex === 0
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
-              }`}
+              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${currentIndex === 0
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
+                }`}
             >
               <span className="rotate-180 scale-75"><SliderArrowIcon /></span>
             </button>
@@ -356,11 +393,10 @@ export default function RentalProperty() {
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
               aria-label="Next slide"
-              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${
-                currentIndex === maxIndex
-                  ? "opacity-30 cursor-not-allowed text-gray-300"
-                  : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
-              }`}
+              className={`w-[45px] h-[45px] rounded-full border border-gray-200 bg-white flex items-center justify-center transition-all ${currentIndex === maxIndex
+                ? "opacity-30 cursor-not-allowed text-gray-300"
+                : "cursor-pointer text-[#1D1D1D] hover:bg-[#1D1D1D] hover:text-white hover:border-[#1D1D1D] shadow"
+                }`}
             >
               <span className="scale-75"><SliderArrowIcon /></span>
             </button>
